@@ -1,0 +1,13 @@
+
+#application definition
+
+INSTALLED_APPS =[
+'HELLO',
+'pruebacarlo',
+'django.contrib.admin',
+'django.contrib.auth',
+'django.contrib.contenttype',
+'django.contrib.sessions',
+'django.contrib.messeges',
+'django.contrib.staticfiles',
+]
