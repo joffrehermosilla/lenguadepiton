@@ -36,6 +36,7 @@ urlpatterns = [
     path('problematica3/', include("problematica3.urls")),
     path('newyear/', include("newyear.urls")),
     path('pruebacarlo/', include("pruebacarlo.urls")),
+    path('tasks/', include("tasks.urls")),
    
    
 ]
