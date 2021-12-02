@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+#agregado
+import os
+#agregado
 
 from pathlib import Path
 
@@ -35,6 +38,7 @@ INSTALLED_APPS = [
     'newyear',
     'pruebacarlo',
     'tasks',
+    'explicacion',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -45,6 +49,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    #whitenoise agregado#
+     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -122,6 +128,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+####agregado
+# path to where static files are copied for deployment (eg, for heroku)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# location of static files in local development: https://learndjango.com/tutorials/django-favicon-tutorial
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+
+MEDIA_ROOT = (
+    BASE_DIR
+)
+MEDIA_URL = '/media/'
+####agregado
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

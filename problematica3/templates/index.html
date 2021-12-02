@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Machine Learning en PyTorch y Django</title>
+    <title>Lengua de Pitón Hackathon Osinergmin</title>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
@@ -15,24 +15,40 @@
 
 
 <h1>πτζ LENGUA DE PITÓN</h1>
-<p>Prototipo APP problemática3 HACKATHON OSINERGMIN
-    Integrantes:
-    Gustavo Sedano
-    Carlo Delgado
-    Hugo Ulfe
-    Joffre Hermosilla (*)
+    <p><lu>
+        <li>Prototipo APP problemática3 HACKATHON OSINERGMIN</li>
+        <li>  Integrantes:</li>
+        <li> Gustavo Sedano</li>
+        <li> Carlo Delgado</li>
+        <li>  Hugo Ulfe</li>
+          <li>   Joffre Hermosilla (*)</li>
+        
+        </lu>
+  
+   
+   
+  
+   
     
-    </p>
-<p><small>Further information:
-    <a href="https://stefanbschneider.github.io/blog/pytorch-django" target="_blank">Blog Post</a>,
-    <a href="https://github.com/stefanbschneider/pytorch-django" target="_blank">GitHub</a></small>
-</p>
+ 
 
 <form method="post" enctype="multipart/form-data" style="margin-top: 50px; margin-bottom: 30px;">
-    {% csrf_token %}
+   {% csrf_token %}
     {{ form }}
     <button type="submit" id="btnUpload" class="btn btn-primary">Upload</button>
 </form>
+    
+    <form name="formulario" method="post" action="" enctype="multipart/form-data" style="margin-top: 50px; margin-bottom: 30px;">
+  <!-- ¡No olvides el enctype! -->
+  <!-- Campo de selección de archivo -->
+
+  <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple  id="btnUpload" class="btn btn-primary"/>
+</form>
+    
+    
+    
+    
+    
 
 {% if image_uri is not None %}
     {% if predicted_label is not None %}
@@ -52,17 +68,17 @@
 {# spinner inside the submit button when uploading and classifying an image #}
 {# from https://stackoverflow.com/a/54533740/2745116 #}
 {# strange: works on Firefox but on Chrome, keeps spinning forever #}
-{#<script>#}
-{#    $(document).ready(function() {#}
-{#        $("#btnUpload").click(function() {#}
-{#            // disable button#}
-{#            $(this).prop("disabled", true);#}
-{#            // add spinner to button#}
-            {#$(this).html(#}
-            {#    `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`#}
-            {#);#}
-{#        });#}
-{#    });#}
-{#</script>#}
+<script>
+   $(document).ready(function() 
+       $("#btnUpload").click(function() 
+           // disable button#}
+           $(this).prop("disabled", true);
+           // add spinner to button#}
+            $(this).html(
+              `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...`
+            ;
+        });
+    });
+</script>
 </body>
 </html>
