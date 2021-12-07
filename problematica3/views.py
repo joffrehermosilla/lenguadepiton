@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-
+from .models import Reconocimiento
 
 
 
@@ -21,7 +21,13 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request,"index.html")
+    return render(request,"index.html",{
+    
+        "reconocimiento": Reconocimiento.objects.all()
+        
+    
+    })
+                 
 
 def hugo(request):
     return HttpResponse("Hello, Hugo!")
@@ -45,6 +51,8 @@ def greet(request, name):
 
 
 #######################################view pytorch tutoeial
+
+
 
 
 

@@ -33,6 +33,7 @@ app_name = 'lenguadepiton'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("flights/", include("flights.urls")),
     path('problematica3/', include("problematica3.urls")),
     path('newyear/', include("newyear.urls")),
     path('pruebacarlo/', include("pruebacarlo.urls")),
