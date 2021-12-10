@@ -51,19 +51,7 @@
 							    </div><!--//col-->
 							    <div class="col-12 col-lg-3">
 
-                              {%extends "layout.html" %}
-                                    {% block body %}
-                                    Reconocimiento
-                                    <ul>
-                                    
-                                    {% for reconocimiento in problematica3 %}
-                                        
-                                        <li>Reconocimiento{{ reconocimiento.id  }}: {{reconocimiento.origin}} to {{reconocimiento.destination}} </li>
-                                        
-                                        {% endfor %}
-                                    
-                                    </ul>
-                                    {% endblock %}
+
                                     
                                     
                                     
@@ -195,6 +183,61 @@ $("button").click(function() {
 	}
 	</style>	
 
+    
+    
+                                  {% extends "layout.html" %}
+                                    {% block body %}
+                                    Reconocimiento
+                                    <ul>
+                                    
+                                    {% for reconocimiento in reconocimientox %}
+                                        
+                                        <li>Reconocimiento{{ reconocimiento.id  }}: {{reconocimiento.origin}} to {{reconocimiento.destination}} </li>
+                                        
+                                        {% endfor %}
+                                    
+                                    </ul>
+                                    {% endblock %}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </html> 
 
 

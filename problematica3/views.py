@@ -23,11 +23,19 @@ from .models import Reconocimiento
 def index(request):
     return render(request,"index.html",{
     
-        "reconocimiento": Reconocimiento.objects.all()
+        "reconocimientox": Reconocimiento.objects.all()
         
     
     })
-                 
+      
+def reconoxco(request, reconocimiento_id):   
+    reconoxco = Reconocimiento.objects.get(pk=reconocimiento_id)
+    return render(request, "reconoxco.html" ,{
+         "reconoxco": reconoxco  
+        })
+    
+    
+    
 
 def hugo(request):
     return HttpResponse("Hello, Hugo!")
