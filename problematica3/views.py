@@ -31,7 +31,8 @@ def index(request):
 def reconoxco(request, reconocimiento_id):   
     reconoxco = Reconocimiento.objects.get(pk=reconocimiento_id)
     return render(request, "reconoxco.html" ,{
-         "reconoxco": reconoxco  
+         "reconoxco": reconoxco, 
+        "passengers": reconoxco.passengers.all()
         })
     
     
