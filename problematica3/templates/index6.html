@@ -189,14 +189,24 @@ $("button").click(function() {
                                     {% block body %}
                                     Reconocimiento
                                     <ul>
-                                    
+                                   
                                     {% for reconocimiento in reconocimientox %}
                                         
-                                        <li>Reconocimiento{{ reconocimiento.id  }}: {{reconocimiento.origin}} to {{reconocimiento.destination}} </li>
+                                        <li>
+                                             <a href="{% url 'index5'  %}">
+                                                     
+                                            Reconocimiento{{ reconocimientox.id  }}: {{reconocimiento.origin}} to {{reconocimiento.destination}} 
+                                           </a>     
+                                                
+                                                </li>
                                         
                                         {% endfor %}
                                     
                                     </ul>
+    
+    
+    
+    
                                     {% endblock %}
     
     

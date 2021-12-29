@@ -8,8 +8,10 @@ from . import views
 app_name ='Problematica3'
 
 urlpatterns = [
-    path('',views.index, name="index"),
-     path("<int:reconocimiento_id>", views.reconoxco, name="reconoxco"),
+    path('',views.index, name="index6"),
+     path("<int:reconoxco_id>", views.reconoxco, name="reconoxco"),
+   
+ 
     path("<str:name>", views.greet, name='greet'),
    
     path("hugo",views.hugo, name="hugo"),
@@ -17,6 +19,8 @@ urlpatterns = [
     path("carlo", views.carlo, name='carlo'),
     path("joffre", views.joffre, name='joffre')
     
- ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ ]
+
+"""+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) """
 
     
