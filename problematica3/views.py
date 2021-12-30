@@ -1,6 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from .models import Reconocimiento
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
+from .models import Reconocimiento, Passenger
 
 
 
@@ -32,8 +35,21 @@ def reconoxco(request, reconoxco_id):
     reconoxco = Reconocimiento.objects.get(pk=reconoxco_id)
     return render(request, "reconoxco.html" ,{
          "reconoxco": reconoxco, 
-        "passengers": reconoxco.passengers.all()
+        "passengers": reconoxco.passengers.all(),
+        "non_passengers": Passenger.objects.exclude(flights=reconoxco).all()
         })
+    
+    
+    
+def book (request, reconoxco_id): 
+    if request.method == "POST":
+        reconoxco = Reconocimiento.objects.get(pk=reconoxco_id)
+        passenger = Passenger.objects.get(pk=iterable(request.POST["passenger"]))
+        passenger.reconocimientox.add(reconoxco)
+        return HttpResponseRedirect(reverse("reconoxco", args=(reconoxco.id) ))
+    
+    
+    
     
     
     

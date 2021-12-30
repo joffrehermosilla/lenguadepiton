@@ -9,8 +9,8 @@ app_name ='Problematica3'
 
 urlpatterns = [
     path('',views.index, name="index6"),
-     path("<int:reconoxco_id>", views.reconoxco, name="reconoxco"),
-   
+    path("<int:reconoxco_id>", views.reconoxco, name="reconoxco"),
+    path("<int:reconoxco_id>/book", views.book, name="book"),
  
     path("<str:name>", views.greet, name='greet'),
    
